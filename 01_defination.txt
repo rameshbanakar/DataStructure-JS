@@ -1,0 +1,25 @@
+What is Datasrtucture?
+--To Manage the data in a efficient way we need a Datasrtucture.
+
+Datasrtucture help us to solve problems in the most efficient way in the terms and time and memory.
+
+
+Built in Datasrtucture:
+--Arrays
+--Sets
+--Objects
+--maps
+
+--custome Datasrtucture:
+--Queues
+--linked lists
+--cirscular likend lists
+--tress
+--graphs
+
+
+Arrays:--
+  arrays is built in Datasrtucture it can hold any kind of data with in it.
+  js arrays are zero indexed arrays
+  arrays iterable we use the arrays with loops
+
