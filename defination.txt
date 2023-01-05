@@ -1,0 +1,4 @@
+What is Datasrtucture?
+--To Manage the data in a efficient way we need a Datasrtucture.
+
+Datasrtucture help us to solve problems in the most efficient way in the terms and time and memory.
