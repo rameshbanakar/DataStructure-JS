@@ -22,15 +22,32 @@ class LinkedList{
         if(this.isEmpty()){
             this.head=node
         }else{
-            this.next=this.head
+            node.next=this.head
             this.head=node
         }
         this.size++
+    }
+    print(){
+        if(this.isEmpty()){
+            console.log("list is empty")
+        }else{
+            let curr=this.head
+            let val=""
+            while(curr){
+                val+=`${curr.value}-->`
+                curr=curr.next
+            }
+            console.log(val)
+        }
     }
 }
 const list=new LinkedList()
 console.log(list.isEmpty())
 console.log(list.getSize())
+list.print();
 list.prepend(10)
+list.print();
 list.prepend(20)
+
 list.prepend(30)
+list.print()
