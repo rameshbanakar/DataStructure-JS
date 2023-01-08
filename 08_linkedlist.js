@@ -4,6 +4,7 @@
 class Node{
     constructor(value){
         this.value=value
+        this.next=null
     }
 }
 class LinkedList{
@@ -26,6 +27,22 @@ class LinkedList{
             this.head=node
         }
         this.size++
+    }
+    append(value){
+        const node =new Node(value)
+        if(this.isEmpty()){
+            this.head=node
+        }else{
+            let curr=this.head
+            while(curr.next!==null){
+                if(curr.next===null){
+                    break
+                }
+                curr=curr.next
+            }
+            curr.next=node
+        }
+
     }
     print(){
         if(this.isEmpty()){
@@ -50,4 +67,6 @@ list.print();
 list.prepend(20)
 
 list.prepend(30)
+list.print()
+list.append(90)
 list.print()
