@@ -41,7 +41,42 @@ class LinkedList{
                 curr=curr.next
             }
             curr.next=node
+            this.size++
         }
+
+    }
+    insert(value,index){
+        if(index<0 || index>this.size){
+            return
+        }else{
+            if(index===0){
+                this.prepend(value)
+            }else{
+                let pre=this.head
+                for (let i=0;i<index-1;i++){
+                    pre=pre.next
+                }
+                let node=new Node(value)
+                node.next=pre.next
+                pre.next=node
+                this.size++
+            }
+        }
+    }
+    removeFrom(index){
+        if(index<0|| index>=this.size){
+            return null
+        }
+        if(index===0){
+            this.head=this.head.next
+        }else{
+            let pre=this.head
+            for(let i=0;i<index-1;i++){
+               pre=pre.next
+            }
+            pre.next=pre.next.next
+        }
+        this.size--
 
     }
     print(){
@@ -69,4 +104,8 @@ list.prepend(20)
 list.prepend(30)
 list.print()
 list.append(90)
+list.print()
+list.insert(45,3)
+list.print()
+list.removeFrom(2)
 list.print()
