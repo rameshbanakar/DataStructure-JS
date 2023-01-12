@@ -70,6 +70,17 @@ class tree {
       }
     }
   }
+  preOrder(root){
+    if(root===null){
+      return false
+    }
+    console.log(root.value)
+    if(root){
+      this.preOrder(root.left)
+      this.preOrder(root.right)
+    }
+
+  }
 }
 let bst = new tree();
 
@@ -77,3 +88,4 @@ bst.insert(10);
 bst.insert(5);
 bst.insert(15);
 bst.search(15);
+bst.preOrder(bst.root)
