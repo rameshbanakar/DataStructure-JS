@@ -95,24 +95,23 @@ class LinkedList {
       this.size--;
     }
   }
-  search(value){
+  search(value) {
     if (this.isEmpty()) {
-      return -1
-    }else{
-      let i=0
-      curr=this.head
-      while(curr){
-        if(curr.value=value){
-          return i
+      return -1;
+    } else {
+      let i = 0;
+      curr = this.head;
+      while (curr) {
+        if ((curr.value = value)) {
+          return i;
         }
-        curr=curr.next
-        i++
+        curr = curr.next;
+        i++;
       }
-      return -1
+      return -1;
     }
   }
-     
-  
+
   print() {
     if (this.isEmpty()) {
       console.log("list is empty");

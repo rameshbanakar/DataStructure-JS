@@ -7,7 +7,7 @@ class Node {
 class doublyLinked {
   constructor() {
     this.head = null;
-    this.tail=null
+    this.tail = null;
     this.size = 0;
   }
   isEmpty() {
@@ -20,26 +20,26 @@ class doublyLinked {
     const node = new Node(value);
     if (this.isEmpty()) {
       this.head = node;
-      this.tail=node
+      this.tail = node;
     } else {
       node.next = this.head;
       this.head.prev = node;
       this.head = node;
     }
-    this.size++
+    this.size++;
   }
-  reverse(){
-      if(this.isEmpty()){
-        console.log("empty list to reverse")
-      }else{
-        let curr=this.tail
-        let val =""
-        while(curr){
-          val+=`${curr.value}-->`
-          curr=curr.prev
-        }
-        console.log(val)
+  reverse() {
+    if (this.isEmpty()) {
+      console.log("empty list to reverse");
+    } else {
+      let curr = this.tail;
+      let val = "";
+      while (curr) {
+        val += `${curr.value}-->`;
+        curr = curr.prev;
       }
+      console.log(val);
+    }
   }
   print() {
     if (this.isEmpty()) {
@@ -62,4 +62,4 @@ l.print();
 console.log(l.getSize());
 l.prepend(20);
 l.print();
-l.reverse()
+l.reverse();
